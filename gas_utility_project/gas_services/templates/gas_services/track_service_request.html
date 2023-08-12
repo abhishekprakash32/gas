@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Service Requests</title>
+</head>
+<body>
+    <h1>Track Service Requests</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Request Date</th>
+                <th>Status</th>
+                <!-- Add other table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for request in requests %}
+                <tr>
+                    <td>{{ request.request_date }}</td>
+                    <td>{{ request.status }}</td>
+                    <!-- Display other request details here -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
